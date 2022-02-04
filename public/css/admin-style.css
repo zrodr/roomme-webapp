@@ -1,0 +1,173 @@
+.admin-wrap {
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.admin-tab {
+  float: left;
+  border: none;
+  width: 200px;
+  height: auto;
+}
+
+.admin-tab button {
+  display: block;
+  background-color: #e6e1d9;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 25px;
+  font-family: "Poiret One", cursive;
+}
+
+.admin-tab button:hover {
+  background-color: #ccc6be;
+}
+
+.admin-tab button.active {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.75)
+  );
+}
+
+.admin-tab-content {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.75)
+  );
+  padding-left: 20px;
+  border: none;
+  width: 70%;
+  border-left: none;
+  height: 100%;
+  overflow: scroll;
+}
+
+.user-avatar {
+  display: block;
+  width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 200px 200px 200px 200px;
+}
+
+.edit-container {
+  display: grid;
+  justify-content: center;
+  grid-column-gap: 5%;
+  grid-row-gap: 3%;
+}
+
+.edit-card {
+  background-color: #ece6db;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  padding: 3%;
+}
+
+.edit-content {
+  font-size: 20px;
+}
+
+#edit-button {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px 5px 5px 5px;
+  border-left: none;
+  border: 0;
+  cursor: pointer;
+  background-color: #e6e1d9;
+  font-family: "Poiret One", cursive;
+  font-size: 15px;
+}
+
+#edit-button:hover {
+  transition: 0.5s;
+  background-color: #ccc6be;
+}
+
+.edit-button {
+  margin: 0 auto;
+  text-align: center;
+}
+.gender-select select {
+  padding: 12px;
+  width: 170px;
+  border: none;
+  outline: none;
+}
+
+.admin-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+}
+
+.title-break-handle {
+  word-break: break-all;
+}
+
+@media only screen and (max-width: 1000px) {
+  .admin-tab-content {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .user-avatar {
+    width: 150px;
+    height: auto;
+  }
+  .admin-tab-content {
+    width: 95%;
+  }
+  .edit-card {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .admin-tab-content {
+    width: 90%;
+  }
+  .tab-title {
+    font-size: 20px;
+  }
+  .edit-card {
+    width: 200px;
+  }
+  .gender-select select {
+    padding: 12px;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .user-avatar {
+    width: 100px;
+    height: auto;
+  }
+  .admin-tab-content {
+    width: 90%;
+  }
+  .tab-title {
+    font-size: 15px;
+  }
+  .edit-card {
+    width: 170px;
+  }
+  .gender-select select {
+    padding: 12px;
+    width: 100px;
+  }
+}

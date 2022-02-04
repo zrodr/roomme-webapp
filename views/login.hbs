@@ -1,0 +1,19 @@
+<div class="login-wrap">
+    <div class="login-content">
+        {{#if err}}
+          <p id="err">{{err}}</p>
+        {{/if}}
+        <form action="/users/login" method="post">
+            <h2> Sign In </h2>
+            <input class="username-box" name="email" type="text" placeholder="Email" required>
+            <br> <br>
+            <input class="password-box" name="password" type="password" placeholder="Password" required>
+            <br>
+            <p class="login-text"> Don't have an account? <a class="login-link" href="./register">Sign Up</a> </p>
+            <div class="signin-button"> <button id="signin-button" class="button" type="submit">Sign In</button> </div>
+            <br>
+        </form>
+    </div>
+
+    <script src="/js/formerror.js"></script>
+</div>

@@ -1,0 +1,163 @@
+<div>
+    <div class="search-container">
+        <div class="search-wrap">
+            <button onclick="myFunction()" class="filter-button" class="button" type="submit">Filter</button>
+            <form class="search-bar" action="/search/text" method="POST">
+                <select class="search-all" name="type" id="type">
+                    <option value="All">All</option>
+                    <option value="Room">Room</option>
+                    <option value="Roommate">Roommate</option>
+                </select>
+                <input name="term" class="textbox-text" type="text" placeholder="Search..." name="search">
+                <button id="go-button" class="button" type="submit">Go</button>
+            </form>
+        </div>
+    </div>
+    
+    <form class="content-container" id="content-container" action="/search/param" method="POST">
+        <div class="filter-container">
+            <br> <b> Gender </b>
+            <table>
+                <thead>
+                    <tr>
+                        <td> <input name="male" type="checkbox" > Male </td> 
+                        <td> <input name="female" type="checkbox"> Female </td>
+                        {{!-- <td> <input name="other" type="checkbox"> Other </td> --}}
+                    </tr>
+                    <tr>
+                        <th>
+                            <b> Room Count </b>
+                        </th>
+                        <th>
+                            <b> Ocupancy </b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="room-count">
+                                <select name="roomCount">
+                                    <option value="0">Any</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+ rooms</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ocupancy">
+                                <select name="occupancy">
+                                    <option value="0">Any</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+ people</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b> Lease Period </b>
+                        </td>
+                        <td>
+                            <b> Price </b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Min                      
+                            <select name="minLeasePeriod" class="add-room-price-box">
+                                <option value="0">Any</option>
+                                <option value="3">3 months</option>
+                                <option value="6">6 months</option>
+                                <option value="9">9 months</option>
+                                <option value="12">1 year</option>
+                                <option value="24">2 years +</option>
+                            </select>
+                            <br>
+                            Max      
+                            <select name="maxLeasePeriod" class="add-room-price-box">
+                                <option value="100">Any</option>
+                                <option value="3">3 months</option>
+                                <option value="6">6 months</option>
+                                <option value="9">9 months</option>
+                                <option value="12">1 year</option>
+                                <option value="24">2 years +</option>
+                            </select>
+                        </td>
+                        <td>
+                            Min                      
+                            <select name="minPrice" class="add-room-price-box">
+                            <option value="$0-$999">$0-$999</option>
+                            <option value="$1000-$1999">$1000-$1999</option>
+                            <option value="$2000-$2999">$2000-$2999</option>
+                            <option value="$3000-$3999">$3000-$3999</option>
+                            <option value="$4000-$5000">$4000-$5000</option>
+                            </select> 
+                            <br> Max 
+                            <select name="maxPrice" class="add-room-price-box">
+                            <option value="$0-$999">$0-$999</option>
+                            <option value="$1000-$1999">$1000-$1999</option>
+                            <option value="$2000-$2999">$2000-$2999</option>
+                            <option value="$3000-$3999">$3000-$3999</option>
+                            <option value="$4000-$5000" selected>$4000-$5000+</option>
+                            </select> 
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br> <b> Required Amenities</b>
+                <table>
+                    <tr>
+                        <td> <input name="backyard" type="checkbox"> Backyard </td> 
+                        <td> <input name="furnished" type="checkbox"> Furnished </td> 
+                    </tr>
+                    <tr>
+                        <td> <input name="gym" type="checkbox"> Gym </td> 
+                        <td> <input name="internet" type="checkbox"> Internet </td> 
+                    </tr>
+                    <tr>
+                        <td> <input name="laundry" type="checkbox"> Laundry </td> 
+                        <td> <input name="parking" type="checkbox"> Parking </td> 
+                    </tr>  
+                    <tr>
+                        <td> <input name="pool" type="checkbox"> Pool </td> 
+                        <td> <input name="bathroom" type="checkbox"> Private Bathroom </td> 
+                    </tr>
+                    <td> <input name="utilities" type="checkbox"> Utilities </td> 
+                </table>
+            <br> <b> Interests</b>
+                <table>
+                    <tr>
+                        <td> <input name="exercise" type="checkbox"> Exercise </td> 
+                        <td> <input name="partying" type="checkbox"> Partying </td> 
+                    </tr>
+                    <tr>
+                        <td> <input name="food" type="checkbox"> Food </td> 
+                        <td> <input name="quiet" type="checkbox"> Quiet </td> 
+                    </tr>
+                    <tr>
+                        <td> <input name="gaming" type="checkbox"> Gaming </td> 
+                        <td> <input name="reading" type="checkbox"> Reading </td> 
+                    </tr>  
+                    <tr>
+                        <td> <input name="media" type="checkbox"> Media </td> 
+                        <td> <input name="sports" type="checkbox"> Sports </td> 
+                    </tr>
+                </table>
+            <div class="go-button-in-filter"> <button id="go-button-in-filter" class="button" type="submit">Go</button> </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function myFunction() {
+        document.getElementById("content-container").classList.toggle("show");
+    }
+</script>

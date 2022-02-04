@@ -1,0 +1,8 @@
+<main>
+  {{> search }}
+  {{#if msg}}
+  {{!-- center is deprecated, should use css --}}
+    <center><h4>{{msg}}</h4></center> 
+  {{/if}}
+  {{> searchresults }}
+</main>

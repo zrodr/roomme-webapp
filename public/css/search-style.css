@@ -1,0 +1,237 @@
+body {
+    width: 100%;
+}
+
+.search-container {
+    padding-top: 2em;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 25vw ;
+}
+
+.search-wrap input {
+    width: 25vw ;
+}
+
+.search-wrap {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.search-bar{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.textbox-text {
+    width: 500px;
+    padding: 5px;
+    padding-left: 3%;
+    height: 30px;
+    border-right: none;
+    border: 0;
+    outline: none;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+#go-button {
+    width: 70px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background-color: #E6E1D9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+}
+
+#go-button:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+
+#go-button-in-filter {
+    width: 70px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    border-left: none;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background-color: #E6E1D9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+}
+
+#go-button-in-filter:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+
+.go-button-in-filter {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.filter-button {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px 0 0 5px;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    border-width: thin;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background-color: #E6E1D9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+}
+
+.filter-button:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+
+.search-all {
+    background-color: #E6E1D9;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    cursor: pointer;
+}
+
+.search-all:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+  
+.search-all select option {
+    padding: 10px;
+}
+
+.content-container {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+    border-radius: 0px 0px 15px 15px;
+    overflow: hidden;
+    transition: height 0ms 400ms, opacity 400ms 0ms;
+    height: 0;
+    opacity: 0;
+    margin: 0 auto;
+}
+
+.filter-container {
+    padding: 5%;
+}
+
+.show {
+    height: auto;
+    opacity: 1;
+    transition: height 0ms 0ms, opacity 400ms 0ms;
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+    width: 20%;
+}
+
+.rent-box {
+    width: 200px;
+    padding: 5px;
+    padding-left: 2%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+  }
+
+
+@media only screen and (max-width: 1400px) {
+    .search-container input {
+        width: 50vw ;
+    }
+    .content-container {
+        width: 530px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .search-container input {
+        width: 30vw !important;
+    }
+    .filter-button {
+        width: 70px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .search-all {
+        width: 110px;
+        height: 30px;
+        font-size: 15px;
+    }
+    #go-button {
+        width: 60px;
+        height: 30px;
+        font-size: 15px;
+    }
+    #go-button-in-filter {
+        width: 60px;
+        height: 30px;
+        font-size: 15px;
+    }
+    .textbox-text {
+        height: 20px;
+    }
+    b {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .search-container input {
+        width: 20vw !important;
+    }
+    .content-container {
+        width: 280px;
+        font-size: 10px;
+    }
+    .filter-button {
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .search-all {
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+    }
+    #go-button {
+        width: 50px;
+        height: 20px;
+        font-size: 10px;
+    }
+    #go-button-in-filter {
+        width: 50px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .textbox-text {
+        height: 10px;
+    }
+    b {
+        font-size: 10px;
+    }
+}

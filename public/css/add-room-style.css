@@ -1,0 +1,262 @@
+.add-room-wrap {
+    width: 100%;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .add-room-content {
+    overflow-x: auto;
+    width: 900px;
+    height: auto;
+    padding-top: 2px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    );
+  }
+  
+  .add-room-table {
+    table-layout: fixed;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    width: 350px;
+  }
+  
+  .smoller-table {
+    overflow-x: auto;
+    table-layout: fixed;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+  }
+  
+  .room-count select {
+    padding: 12px;
+    width: 170px;
+    border: none;
+    outline: none;
+  }
+  
+  .ocupancy select {
+    padding: 12px;
+    width: 170px;
+    border: none;
+    outline: none;
+  }
+  
+  .lease-period select {
+    padding: 12px;
+    width: 170px;
+    border: none;
+    outline: none;
+  }
+  
+  .add-room-text-box {
+    width: 30vw;
+    padding: 5px;
+    padding-left: 10%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+  }
+  
+  .add-room-price-box {
+    width: 150px;
+    padding: 5px;
+    padding-left: 10%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+  }
+
+  .amenities-table {
+    padding-left: 2%;
+    width: 100%;
+    display:block;
+  }
+
+  td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  input[type="text"]:focus {
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+  }
+  
+  #add-room-file-button {
+    width: auto;
+    height: 40px;
+    border-left: none;
+    border: 0;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+  }
+  
+  .add-room-file-button {
+    cursor: pointer;
+    background-color: #e6e1d9;
+    padding: 0.25em;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  #add-room-button {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    border-left: none;
+    border: 0;
+    cursor: pointer;
+    background-color: #e6e1d9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+  }
+  
+  #add-room-button:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+  }
+  
+  .add-room-button {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* VALIDATION MESSAGE */
+  
+  .add-room-error {
+    display: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: red;
+    margin-bottom: -30px;
+  }
+  
+  input:not(:focus):not(:placeholder-shown):invalid ~ .add-room-error {
+    display: block;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .add-room-content{
+      width:600px;
+    }
+    .add-room-table{
+      width:300px;
+      padding-right:0%;
+    }
+    .room-count select{
+      width:150px;
+      height:auto;
+      padding:2px;
+    }
+    .ocupancy select{
+      width:150px;
+      height:auto;
+      padding:2px;
+    }
+    .lease-period select{
+      width:150px;
+      height:auto;
+      padding:2px;
+    }
+    .add-room-price-box{
+      width:150px;
+      height:auto;
+      padding:2px;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    h2{
+      font-size:30px;
+    }
+    td{
+      font-size:20px;
+    }
+    b{
+      font-size:20px;
+    }
+    .add-room-content{
+      width:450px;
+    }
+    .add-room-table{
+      width:450px;
+      padding-right:25%;
+    }
+    .room-count select{
+      width:100px;
+      height:auto;
+      padding:2px;
+    }
+    .ocupancy select{
+      width:100px;
+      height:auto;
+      padding:2px;
+    }
+    .lease-period select{
+      width:100px;
+      height:auto;
+      padding:2px;
+    }
+    .add-room-price-box{
+      width:100px;
+      height:auto;
+      padding:2px;
+    }
+
+  }
+  
+  @media only screen and (max-width: 280px) {
+    h2{
+      font-size:25px;
+    }
+    td{
+      font-size:15px;
+    }
+    b{
+      font-size:10px;
+    }
+    .add-room-content{
+      width:250px;
+    }
+    .add-room-table{
+      width:250px;
+      padding-right:25%;
+    }
+    .room-count select{
+      width:50px;
+      height:auto;
+      padding:2px;
+    }
+    .ocupancy select{
+      width:50px;
+      height:auto;
+      padding:2px;
+    }
+    .lease-period select{
+      width:50px;
+      height:auto;
+      padding:2px;
+    }
+    .add-room-price-box{
+      width:50px;
+      height:auto;
+      padding:2px;
+    }
+
+  }

@@ -1,0 +1,106 @@
+{{#if logged}}
+<div class="add-room-wrap">
+    <div class="add-room-content">
+        <form action="/listing/room" method="POST" enctype="multipart/form-data">
+            <h2> List Your Room </h2>
+            <table class="add-room-table">
+                <tr>
+                    <td> <b> Title </b> </td>
+                    <td> <input class="add-room-text-box" type="text" placeholder="Room Title" name="title" required> </td>
+                </tr>
+                <tr>
+                    <td> <b> Address </b> </td>
+                    <td> <input class="add-room-text-box" type="text" placeholder="Room Address" name="address" required> </td>
+                </tr>
+                <tr>
+                    <td> <b> Description </b> </td>
+                    <td> <input class="add-room-text-box" type="text" placeholder="Room Description" name="description" required> </td>
+                </tr>
+            </table>
+            <table class="smoller-table">
+                <tr>
+                    <td> <b> Room Count </b> </td>
+                    <td>
+                        <div class="room-count">
+                            <select name="roomCount">
+                                <option value="0">Number of Rooms</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5+ rooms</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td> <b> Ocupancy </b> </td>
+                    <td>
+                        <div class="ocupancy">
+                            <select name="occupancy">
+                                <option value="0">Ocupancy</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5+ people</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <b> Lease Period </b> </td>
+                    <td>
+                        <div class="lease-period">
+                            <select name="leasePeriod">
+                                <option value="0">Time for Rent</option>
+                                <option value="3">Less than 3 months</option>
+                                <option value="6">Less than 6 months</option>
+                                <option value="9">Less than 9 months</option>
+                                <option value="12">Less than 1 year</option>
+                                <option value="24">Less than 2 years</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td> <b> Price </b> </td>
+                    <td>
+                        {{!-- <input name="priceRange" class="add-room-price-box" type="number" min="0" placeholder="$$$" required>--}}
+                        <select name="priceRange" class="add-room-price-box" required>
+                          <option value="$0-$999">$0-$999</option>
+                          <option value="$1000-$1999">$1000-$1999</option>
+                          <option value="$2000-$2999">$2000-$2999</option>
+                          <option value="$3000-$3999">$3000-$3999</option>
+                          <option value="$4000-$5000">$4000-$5000</option>
+                        </select>
+                        <p class="add-room-error"> Please enter a valid price. </p>
+                    </td>
+                </tr>
+            </table>
+            <b> Amenities</b>
+            <div>
+                <table class="amenities-table">
+                    <tr>
+                        <td> <input name="backyard" type="checkbox"> Backyard </td> 
+                        <td> <input name="furnished" type="checkbox"> Furnished </td> 
+                        <td> <input name="gym" type="checkbox"> Gym </td> 
+                        <td> <input name="internet" type="checkbox"> Internet </td> 
+                    </tr>
+                    <tr>
+                        <td> <input name="laundry" type="checkbox"> Laundry </td> 
+                        <td> <input name="parking" type="checkbox"> Parking </td>
+                        <td> <input name="pool" type="checkbox"> Pool </td> 
+                        <td> <input name="bathroom" type="checkbox"> Private Bathroom </td> 
+                    </tr>
+                    <td> <input name="utilities" type="checkbox"> Utilities </td> 
+                </table>
+            </div>
+            <label for="add-room-file-button" class="add-room-file-button"> <b> Upload Image </b> </label>
+            <br>
+            <input name="photo" type="file" id="add-room-file-button" accept="image/*"/>
+            <br>
+            <div class="add-room-button"> <button id="add-room-button" class="button" type="submit">Upload</button> </div>
+            <br>
+        </form>
+    </div>
+</div>
+{{else}}
+  <h2>Error not logged in</h2>
+{{/if}}

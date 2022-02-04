@@ -1,0 +1,38 @@
+<div class="register-wrap">
+    <div class="register-content">
+      <form action="/users/register" method="post">
+        {{#if err}}
+          <p id="err">{{err}}</p>
+        {{/if}}
+
+        <h2> Sign Up </h2>
+        <input class="text-box" type="text" name = "name" placeholder="Username" required>
+        <br> <br>
+        <input class="text-box" type="email" name="email" placeholder="Email" required>
+        <p class="register-email-error"> Please enter a valid email address. </p>
+        <br> <br>
+        <input class="text-box" type="tel" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}" required>
+        <p class="register-phone-error"> Please enter a valid phone number. </p>
+        <br> <br>
+        <input class="text-box" type="password" name="password" placeholder="Password" required>
+        <br> <br>
+        <div class="gender-select">
+            <select name = "gender">
+              <option value="0">Gender</option>
+              <option value="1">Male</option>
+              <option value="2">Female</option>
+              <option value="3">Prefer not to say</option>
+            </select>
+        </div>
+        <br>
+        <div class="agreement"> <p class="register-text"> By clicking Sign Up, I am at least 18 years old.
+          I have read, understand, and agree to <a class="register-link" href="">Terms & Privacy</a>. </p> </div>
+        <p class="register-text"> Already have an account? <a class="register-link" href="./login">Sign In</a> </p>
+        <div class="signup-button"> <button id="signup-button" class="button" type="submit">Sign Up</button> </div>
+        <br>
+      </form>
+    </div>
+
+
+    <script src="/js/formerror.js"></script>
+</div>

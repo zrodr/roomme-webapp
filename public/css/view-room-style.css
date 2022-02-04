@@ -1,0 +1,109 @@
+.map {
+    width: 100%;
+    height: 30vh;
+}
+
+.room-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.room-content {
+    height: auto;
+    padding: 2%;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+}
+
+.room-image {
+    padding-top: 2%;
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.room-name {
+    font-family: "Italiana", serif;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.room-title {
+    font-family: "Italiana", serif;
+    font-weight: normal;
+    font-size: 25px;
+    border-width: 1px;
+    border-bottom: solid;
+}
+
+.room-text {
+    font-family: "Poiret One", cursive;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: left;
+}
+
+#rent-room-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px 5px 5px 5px;
+    border-left: none;
+    border: 0;
+    cursor: pointer;
+    background-color: #E6E1D9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+}
+
+#rent-room-button:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+
+.rent-room-button {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.room-table{
+    font-size: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+    .room-image {
+        width: 600px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .room-image {
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .room-image {
+        width: 300px;
+        height: auto;
+    }
+    .room-table {
+        font-size: Medium;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .room-image {
+        width: 200px;
+    }
+    .room-table {
+        font-size: small;
+    }
+}

@@ -1,0 +1,50 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#page-wrap {
+    padding-bottom: 2.5rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.swe-wraper {
+    padding-top: 3%;
+}
+
+.swe-container {
+    padding: 3%;
+    background-color: #E6E1D9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-color: black;
+}
+
+.swe-message {
+    text-align: center;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .swe-message {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .swe-message {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .swe-message {
+        font-size: 10px;
+      }
+}

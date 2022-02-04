@@ -1,0 +1,239 @@
+header {
+    width: 100%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #E6E1D9;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: black;
+}
+
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url("https://www.suitehomechicago.com/wp-content/uploads/2019/03/living-scaled.jpg");
+    background-color: #E6E1D9;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    text-align: justify;
+}
+
+.nav-table {
+    width: 100%;
+    text-align: center;
+    background-color: #E6E1D9;
+    border-spacing: 0px 0px;
+}
+
+.roomme {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 65px;
+    font-family: "Italiana", serif;
+}
+
+.roomme:hover {
+    text-shadow: 10px 10px #ccc6be;
+    transition: 0.3s;
+}
+
+.navigation {
+    font-family: "Poiret One", cursive;
+}
+
+.nav-text {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-text:hover {
+    text-shadow: 8px 8px #ccc6be;
+    transition: 0.3s;
+}
+
+.sign-up-button {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Poiret One", cursive;
+    font-weight: bold;
+}
+
+.sign-up-button:hover {
+    text-shadow: 10px 10px #ccc6be;
+    transition: 0.3s;
+}
+
+#sign-up-button {
+    border: none;
+    cursor: pointer;
+    background-color: #E6E1D9;
+}
+
+.sign-in-button {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Poiret One", cursive;
+    font-weight: bold;
+}
+
+.sign-in-button:hover {
+    text-shadow: 10px 10px #ccc6be;
+    transition: 0.3s;
+}
+
+#sign-in-button {
+    border: none;
+    cursor: pointer;
+    background-color: #E6E1D9;
+}
+
+/* Navigation bar after the user is logged in */
+.upload-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+.upload-dropdown-content {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+    display: none;
+    position: absolute;
+    min-width: 180px;
+    padding: 10px;
+    right : 0;
+}
+
+.upload-dropdown-content a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.upload-dropdown:hover .upload-dropdown-content {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.upload-text:hover {
+    color: #ccc6be;
+    transition: 0.3s;
+}
+
+.avatar-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+.avatar-dropdown-content {
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    padding: 10px;
+    right: 0;
+}
+
+.icon {
+    height: 60px;
+    width: 60px;
+}
+
+.avatar-dropdown-content a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.avatar-dropdown:hover .avatar-dropdown-content {
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.avatar-text:hover {
+    color: #ccc6be;
+    transition: 0.3s;
+}
+
+.sign-out-button {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Poiret One", cursive;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.sign-out-button:hover {
+    color: #ccc6be;
+    transition: 0.3s;
+}
+
+#sign-out-button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .roomme {
+        font-size: 30px;
+    }
+
+    .nav-text {
+        font-size: 20px;
+    }
+
+    .sign-up-button {
+        font-size: 20px;
+    }
+
+    .sign-in-button {
+        font-size: 20px;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .roomme {
+        font-size: 25px;
+    }
+
+    .nav-text {
+        font-size: 10px;
+    }
+
+    .sign-up-button {
+        font-size: 10px;
+    }
+
+    .sign-in-button {
+        font-size: 10px;
+    }
+
+    .icon {
+        height: 20px;
+        width: 20px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}

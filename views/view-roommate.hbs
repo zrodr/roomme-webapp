@@ -1,0 +1,51 @@
+<main>
+  <div class="roommate-container">
+    <div class="roommate-content">
+        {{#if imgData}}
+          <img src={{imgData}} class="roommate-image">
+        {{else}}
+          <img src="/image/icon-roommate.png" class="roommate-image">
+        {{/if}}
+        
+        <p class="roommate-name"><b><center> {{listing.name}} </center></b></p>
+        <p class="roommate-title"><i> {{listing.gender}} </i></p>
+        <p class="roommate-text"> {{listing.description}} </p>
+        <br> <br>
+        <p class="roommate-title"><i> Hobbies </i></p>
+          <ul class="roommate-text">
+            {{#each listing.interests}} 
+              <br>
+              <ul class="roommate-interest-list">
+                <li>{{this}}</li>
+              </ul>
+            {{/each}}
+          </ul>
+        <br> <br>
+        {{#if listing.name}}
+          <p class="roommate-title"><i> Other Info </i></p>
+          <p class="roommate-text">
+            <table class="view-roommate-table">
+              <tr>
+                <td width="100"> Email: </td>
+                <td> {{listing.email}} </td>
+              </tr>
+              <tr>
+                <td width="100"> Phone Number: </td>
+                <td> {{listing.phone_number}} </td>
+              </tr>
+            </table>
+          </p>
+          <br>
+        {{/if}}
+        <p class="roommate-text"> This person is looking for a place to rent for {{listing.duration}} months </p>
+        <br>
+      {{#if listing.email}}
+      <div class="rent-room-button">
+        <a href = "mailto: {{listing.email}}">        
+          <button id="rent-room-button" class="button" type="submit">Contact Roommate</button>
+        </a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</main>

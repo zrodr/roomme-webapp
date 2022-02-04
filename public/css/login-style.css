@@ -1,0 +1,112 @@
+.login-wrap {
+    width: 100%;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    justify-content: center;
+}
+
+.login-content {
+    width: 450px;
+    height: auto;
+    padding-top: 2px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+}
+
+.username-box {
+    width: 300px;
+    padding: 5px;
+    padding-left: 3%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+}
+
+.password-box {
+    width: 300px;
+    padding: 5px;
+    padding-left: 3%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+}
+
+.login-wrap input {
+    width: 75% !important;
+}
+
+input[type=text]:focus {
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+input[type=password]:focus {
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+#signin-button {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    border-left: none;
+    border: 0;
+    cursor: pointer;
+    background-color: #E6E1D9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+}
+
+#signin-button:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+
+.signin-button {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-text {
+    font-size: 20px;
+}
+
+.login-link {
+    color: #7a613f;
+}
+
+.login-link:hover {
+    transition: 0.2s;
+    text-shadow: 1px 1px #9c7b50;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-text {
+        font-size: 16px;
+    }
+    #signin-button {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .login-content {
+        width: 250px;
+        height: auto;
+    }
+    .login-text {
+        font-size: 10px;
+    }
+    #signin-button {
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+    }
+}

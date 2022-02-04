@@ -1,0 +1,88 @@
+{{#if logged}}
+  <div class="add-roommate-wrap">
+    <div class="add-roommate-content">
+      <form
+        action="/listing/roommate"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <h2> Upload Your Profile </h2>
+        <table class="add-roommate-table">
+          <tr>
+            <td> <b> Title </b> </td>
+            <td>
+              <input
+                class="add-roommate-text-box"
+                name="title"
+                type="text"
+                placeholder="Your listing title"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td> <b> Description </b> </td>
+            <td>
+              <input
+                class="add-roommate-text-box"
+                name="description"
+                type="text"
+                placeholder="Describe yourself"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td> <b> Duration </b> </td>
+            <td>
+              <div class="duration-select">
+                <select name="duration">
+                  <option value="0">Time for Rent</option>
+                  <option value="1">Less than 3 months</option>
+                  <option value="2">Less than 6 months</option>
+                  <option value="3">Less than 9 months</option>
+                  <option value="4">Less than 1 year</option>
+                  <option value="5">Less than 2 years</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <b> Interests </b>
+        <div name="interests">
+          <table class="interests-table">
+            <tr>
+              <td> <input name="exercise" type="checkbox" /> Exercise </td>
+              <td> <input name="food" type="checkbox" /> Food </td>
+              <td> <input name="gaming" type="checkbox" /> Gaming </td>
+              <td> <input name="media" type="checkbox" /> Media </td>
+            </tr>
+            <tr>
+              <td> <input name="partying" type="checkbox" /> Partying </td>
+              <td> <input name="quiet" type="checkbox" /> Quiet </td>
+              <td> <input name="reading" type="checkbox" /> Reading </td>
+              <td> <input name="sports" type="checkbox" /> Sports </td>
+            </tr>
+          </table>
+        </div>
+        <br />
+        <label for="add-roommate-file-button" class="add-roommate-file-button">
+          <b> Upload Your Image </b>
+        </label>
+        <br />
+        <input type="file" name="photo" id="add-roommate-file-button" accept="image/*"/>
+        <br />
+        <div class="add-roommate-button">
+          <button
+            id="add-roommate-button"
+            class="button"
+            type="submit"
+          >Upload</button>
+        </div>
+        <br />
+      </form>
+    </div>
+  </div>
+{{else}}
+  <h2>Error not logged in</h2>
+{{/if}}

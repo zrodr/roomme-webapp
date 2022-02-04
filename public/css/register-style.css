@@ -1,0 +1,162 @@
+.register-wrap {
+    width: 100%;
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    justify-content: center;
+}
+
+.register-content {
+    width: 450px;
+    height: auto;
+    padding-top: 2px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+}
+
+.text-box {
+    width: 300px;
+    padding: 5px;
+    padding-left: 3%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+}
+
+.gender-select {
+    width: 300px;
+    padding: 5px;
+    padding-left: 3%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+}
+
+.agreement {
+    margin: 20px;
+    text-align: left;
+}
+
+input[type=text]:focus {
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+input[type=email]:focus {
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+input[type=password]:focus {
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.register-text {
+    font-size: 17px;
+}
+
+.register-link {
+    color: #7a613f;
+}
+
+.register-link:hover {
+    transition: 0.2s;
+    text-shadow: 1px 1px #9c7b50;
+}
+
+.gender-select {
+    display: inline-block;
+}
+
+.gender-select select {
+    padding: 12px;
+    width: 200px;
+    border: none;
+    outline: none;
+}
+
+#signup-button {
+    width: 90px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    border-left: none;
+    border: 0;
+    cursor: pointer;
+    background-color: #E6E1D9;
+    font-family: "Poiret One", cursive;
+    font-size: 20px;
+}
+
+#signup-button:hover {
+    transition: 0.5s;
+    background-color: #ccc6be;
+}
+
+.signup-button {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* VALIDATION MESSAGE */
+
+.register-email-error {
+    display: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: red;
+    margin-bottom: -30px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ .register-email-error {
+    display: block;
+}
+
+.register-phone-error {
+    display: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: red;
+    margin-bottom: -30px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ .register-phone-error {
+    display: block;
+}
+
+.register-content input {
+    width: 75% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    #signup-button {
+        width: 70px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .register-content {
+        width: 250px;
+        height: auto;
+    }
+    .register-text {
+        font-size: 15px;
+    }
+    #signup-button {
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .text-box {
+        width: 250px;
+    }
+    .gender-select {
+        width: 230px;
+    }
+}

@@ -1,0 +1,146 @@
+<main>
+  {{#if logged}}
+  <div class="admin-wrap">
+    <div class="admin-tab">
+      <button class="tab-name" onclick="openSetting(event, 'profile')" id="defaultOpen"><div class="tab-title">Profile</div></button>
+      <button class="tab-name" onclick="openSetting(event, 'viewlist')"><div class="tab-title">View List</div></button>
+    </div>
+
+    <div id="profile" class="admin-tab-content">
+    {{#if err}}
+         <p id="err">{{err}}</p>
+    {{/if}}
+    <form action="/users/update" method="post">
+      <h3>Edit Your Profile</h3>
+      
+      <img src="/image/icon-user.png" class="user-avatar">
+      {{!--<br>
+      <label for="add-roommate-file-button" class="add-roommate-file-button"> <b> Upload Your Image </b> </label>
+      <br>
+      <input type="file" id="add-roommate-file-button">
+      <br>--}}
+
+      <table class="add-roommate-table">
+        <tr>
+          <td> <b> Name </b> </td>
+          <td> <input class="add-roommate-text-box" name="name" type="text" placeholder="Your Full Name" required> </td>
+        </tr>
+        <tr>
+          <td> <b> Password </b> </td>
+          <td> <input class="add-roommate-text-box" type="password" name="password" placeholder="Your Password" required> </td>
+        </tr>
+        <tr>
+          <td> <b> Email </b> </td>
+          <td> <input class="add-roommate-text-box" name="email" type="email" placeholder="Your Email" required> </td>
+        </tr>
+        <tr>
+          <td> <b> Phone </b> </td>
+          <td> <input class="add-roommate-text-box" name="phone_number" type="tel" placeholder="Your Phone Number" required> </td>
+        </tr>
+        <tr>
+          <td> <b> Gender </b></td>
+          <td>
+            <div class="gender-select">
+                <select name = "gender">
+                  <option value="0">Gender</option>
+                  <option value="1">Male</option>
+                  <option value="2">Female</option>
+                  <option value="3">Prefer not to say</option>
+                </select>
+            </div>
+          </td>
+        </tr>
+{{!--         <tr> --}}
+{{!--           <td> <b> Duration </b> </td> --}}
+{{!--           <td> --}}
+{{!--             <div class="duration-select">  --}}
+{{!--               <select name="duration"> --}}
+{{!--                   <option value="0">Time for Rent</option> --}}
+{{!--                   <option value="1">Less than 3 months</option> --}}
+{{!--                   <option value="2">Less than 6 months</option> --}}
+{{!--                   <option value="3">Less than 9 months</option> --}}
+{{!--                   <option value="4">Less than 1 year</option> --}}
+{{!--                   <option value="5">Less than 2 years</option> --}}
+{{!--               </select> --}}
+{{!--             </div> --}}
+{{!--           </td> --}}
+{{!--         </tr> --}}
+      </table>
+      
+        <br>
+        <div class="add-roommate-button"> <button id="add-roommate-button" class="button" type="submit"> Save </button> </div>
+        <br>
+        </form>
+    </div>
+
+
+    <div id="viewlist" class="admin-tab-content">
+      <h3>Edit Your List</h3>
+      {{msg}}
+      <div class="edit-container">
+        {{#each listings}}
+          <div class="edit-card">
+            <div class="edit-content">
+              <div class="title-break-handle">
+              {{this.title}}
+              </div>
+              <br><br>
+              <table>
+                <tr>
+                  {{#if this.address}}
+                    {{#if this.imageData}}
+                      <img src={{this.imageData}} alt="Listing photo" class="admin-img">
+                    {{else}}
+                      <img src="/image/icon-room.png" class="admin-img">
+                    {{/if}}
+                    <br>
+                    <td> <a href='./edit-room/{{this.id}}' class="edit-button"> <button id="edit-button" class="button" type="submit">Edit</a> </td>
+                    
+                    <form action="/listing/room/{{this.id}}?_method=DELETE" method="POST">
+                    <td> <button id="edit-button" class="button" type="submit">Delete</button> </td>
+                    </form>
+                  {{else}}
+                    {{#if this.imageData}}
+                      <img src={{this.imageData}} alt="Listing photo" class="admin-img">
+                    {{else}}
+                      <img src="/image/icon-roommate.png" class="admin-img">
+                    {{/if}}
+                    <br>
+                    <td> <a href="./edit-roommate/{{this.id}}" class="edit-button"> <button id="edit-button" class="button" type="submit">Edit</a> </td>
+                    
+                    <form action="/listing/roommate/{{this.id}}?_method=DELETE" method="POST">
+                    <td> <button id="edit-button" class="button" type="submit">Delete</button> </td>
+                    </form>
+                  {{/if}}
+                </tr>
+              </table>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function openSetting(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("admin-tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab-name");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+  <script src="/js/formerror.js"></script>
+  {{else}}
+    <h2>Error not logged in</h2>
+  {{/if}}
+</main>

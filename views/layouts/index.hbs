@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" type="text/css" href="/css/about-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/nav-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/footer-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/search-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/search-result-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/login-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/register-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/add-room-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/add-roommate-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/view-room-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/view-roommate-style.css">
+  <link rel="stylesheet" type="text/css" href="/css/admin-style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Poiret+One&family=DM+Serif+Text&display=swap">
+
+</head>
+
+<body>
+  {{!--
+
+  All our templates in the root of the views/ folder (NOT in subdirectories)
+  will be 'dropped into' {{{ body }}} when res.render() is called. Use this
+  page for HTML boilerplate that can be reused across pages!
+
+  --}}
+  <div id="page-container">
+    <div id="page-wrap">
+      {{> header }}
+
+      {{{ body }}} {{!-- Page content here! --}}
+      {{#if logged}}
+      <script>
+        let ele = document.getElementById('sign-out-button');
+        if(ele){
+            ele.onclick = (even) => {
+                fetch('/users/logout',{
+                    method:"POST"
+                })
+                .then((data) => {
+                    location.replace('/');
+                })
+            }
+        }
+      </script>
+      {{/if}}
+    </div>
+
+    <footer id="footer">
+      {{> footer}}
+    </footer>
+  </div>
+</body>
+
+</html>

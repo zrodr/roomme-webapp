@@ -1,0 +1,39 @@
+.individual-container {
+    padding-top: 50px;
+    margin-left: 10%;
+    margin-right: 300px;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.image1 {
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.name {
+    margin-top: -5px;
+    font-family: "Italiana", serif;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.position {
+    margin-top: -35px;
+    margin-left: 320px;
+    margin-bottom: 20px;
+    font-family: "Italiana", serif;
+    font-weight: normal;
+    font-size: 25px;
+    text-align: right;
+    border-width: 1px;
+    border-bottom: solid;
+}
+
+.intro {
+    font-family: "Poiret One", cursive;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: left;
+}

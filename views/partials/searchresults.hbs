@@ -1,0 +1,33 @@
+<div class="result-wrap">
+    <div class="result-container">
+        {{#each searchResults}}
+            {{#if this.address}}
+                <a href="/listing/room/?id={{this.id}}">
+            {{else}}
+                <a href="/listing/roommate/?id={{this.id}}">
+            {{/if}}
+                <div class="result-card">
+                    {{#if this.address}}
+                        <b> Room </b>
+                    {{else}}
+                        <b> Roommate </b>
+                    {{/if}}
+                    <div class="result-content">
+                        <br>
+                        {{#if this.imageData}}
+                          <img src={{this.imageData}} alt="Room Image" class="img">
+                        {{else}}
+                            {{#if this.address}}
+                                <img src="/image/icon-room.png" class="img">
+                            {{else}}
+                                <img src="/image/icon-roommate.png" class="img">
+                            {{/if}}
+                        {{/if}}
+                        <br>
+                        {{this.title}}
+                    </div>
+                </div> 
+            </a>
+        {{/each}}
+    </div>
+</div>

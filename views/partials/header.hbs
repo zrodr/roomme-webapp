@@ -1,0 +1,39 @@
+<header>
+  <div class="navigation">
+    <table class="nav-table">
+      <tr>
+        <th width="150"> <a class="nav-text" href="/"> Home </a> </th>
+        <th width="150"> <a class="nav-text" href="/about"> About </a> </th>
+        <th> <a class="roomme" href="/"> RoomMe </a> </th>
+
+        {{!-- Nav bar BEFORE user is logged in--}}
+         
+        {{#if logged}}
+        {{!-- Nav bar AFTER user is logged in --}}
+        <th width="130">
+          <div class="upload-dropdown">
+            <div class="nav-text"> Upload </div>
+            <div class="upload-dropdown-content">
+              <a class="upload-text" href="/add-room">New Room</a> <br>
+              <a class="upload-text" href="/add-roommate">Roommate Profile</a>
+            </div>
+          </div>
+        </th>
+        {{!-- <th width="70"> <a href="/"> <img src="/image/icon-message.png" class='icon'> </a> </th> --}}
+        <th width="100">
+          <div class="avatar-dropdown">
+            <img class="icon" src="/image/icon-avatar.png">
+            <div class="avatar-dropdown-content">
+              <a class="avatar-text" href="/admin"> My Setting </a> <br>
+              <button id="sign-out-button" class="sign-out-button"> Sign Out</button>
+            </div>
+          </div>
+        </th>
+        {{else}}
+        <th width="150"> <a href="/register"> <button id="sign-up-button" class="sign-up-button"> Sign Up </button> </a> </th>
+        <th width="150"> <a href="/login"> <button id="sign-in-button" class="sign-in-button"> Sign In</button> </a> </th>
+        {{/if}}
+      </tr>
+    </table>
+  </div>
+</header>

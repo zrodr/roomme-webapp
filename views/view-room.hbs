@@ -1,0 +1,152 @@
+<main>
+  <div class="room-container">
+    <div class="room-content">
+      {{#if imgData}}
+        <img src={{imgData}} class="room-image" />
+      {{else}}
+        <img src="/image/icon-room.png" style="height:200px;width:auto;" class="room-image">
+      {{/if}}
+
+      <p class="room-name"><b> <center> {{listing.title}} </center> </b></p>
+      <br>
+      <p class="room-title"><i> {{listing.address}} </i></p>
+      <p class="room-text"> {{listing.description}} </p>
+      <br>
+      <p class="room-title"><i> Room Information </i></p>
+      <p class="room-text">
+        <table class="room-table">
+          <tr>
+            <td> Number of Rooms: {{listing.room_count}} </td>
+            <td> Ocupancy: {{listing.occupancy}} people </td>
+            <td> Lease Period: {{listing.lease_period}} months </td>
+          </tr>
+          <tr>
+            <td>
+              Backyard:
+              {{#if listing.amenities.backyard}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+            <td>
+              Furnished:
+              {{#if listing.amenities.furnished}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+            <td>
+              Gym:
+              {{#if listing.amenities.gym}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Internet:
+              {{#if listing.amenities.internet}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+            <td>
+              Laundry:
+              {{#if listing.amenities.laundry}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+            <td>
+              Parking:
+              {{#if listing.amenities.garage_parking}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Pool:
+              {{#if listing.amenities.pool}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+            <td>
+              Bathroom:
+              {{#if listing.amenities.private_bathroom}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+            <td>
+              Utilities:
+              {{#if listing.amenities.utilities_included}}
+                &#10003;
+              {{else}}
+                &#10007;
+              {{/if}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Price:
+              {{#if listing.price_range}}
+                {{listing.price_range}}
+              {{else}}
+                N/A
+              {{/if}}
+            </td>
+          </tr>
+        </table>
+      </p>
+      {{#if listing.name}}
+        <p class="room-title"><i> Other Information </i></p>
+        <p class="room-text">
+          <table class="room-table">
+            <tr>
+              <td> Name: {{listing.name}} </td>
+              <td> Phone Number: {{listing.phone_number}} </td>
+            </tr>
+            <tr>
+              <td> Email: {{listing.email}} </td>
+              {{#if listing.gender}}              
+              <td> Gender: {{listing.gender}} </td>
+              {{/if}}
+            </tr>
+          </table>
+        </p>
+      {{/if}}
+      <p class="room-title"><i> Map </i></p>
+      <center>
+        <iframe
+          class="map"
+          width="600"
+          height="600"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          src={{listing.mapLink}}>
+        </iframe>
+      </center>
+      <br>
+      {{#if listing.email}}
+      <div class="rent-room-button">
+        <a href = "mailto: {{listing.email}}">        
+          <button id="rent-room-button" class="button" type="submit">Contact to Rent</button>
+        </a>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</main>

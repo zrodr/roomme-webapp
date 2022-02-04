@@ -1,0 +1,70 @@
+h2{
+    text-align: center;
+    font-weight: 200;
+    font-size: 40px;
+    font-family: "Italiana", serif;
+}
+
+body {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: "Poiret One", cursive;
+    min-width: 30%;
+    min-height: 30%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+b {
+    font-size: 25px;
+    font-family: "Italiana", serif;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1400px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 4%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: none;
+        grid-row-gap: 1%;
+    }
+}
+
+.grid-containerLeader{
+    display: grid;
+    grid-gap: 30px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.about-pic {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 200px 200px 200px 200px;
+    box-shadow: 0 0 50px #9292A0;
+}

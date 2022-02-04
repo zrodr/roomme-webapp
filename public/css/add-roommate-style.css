@@ -1,0 +1,137 @@
+.add-roommate-wrap {
+  width: 100%;
+  display: flex;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  justify-content: center;
+}
+
+.add-roommate-content {
+  overflow-x: auto;
+  width: 900px;
+  height: auto;
+  padding-top: 2px;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.75)
+  );
+}
+
+.add-roommate-table {
+  table-layout: fixed;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  width: 350px;
+}
+
+@media only screen and (max-width: 450px) {
+  .add-roommate-table {
+    width: 80%;
+  }
+}
+
+.interests-table {
+  padding-left: 2%;
+  width: 100%;
+}
+
+.add-roommate-text-box {
+  width: 30vw;
+  padding: 5px;
+  padding-left: 10%;
+  height: 30px;
+  border: 0;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+}
+
+@media screen and (max-width: 600px) {
+  input[type="text"] {
+    width: 90%;
+    margin-top: 0;
+  }
+}
+
+td {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input[type="text"]:focus {
+  transition: 0.5s;
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+#add-roommate-file-button {
+  width: auto;
+  height: 40px;
+  border-left: none;
+  border: 0;
+  font-family: "Poiret One", cursive;
+  font-size: 20px;
+}
+
+.add-roommate-file-button {
+  cursor: pointer;
+  background-color: #e6e1d9;
+  padding: 0.25em;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#add-roommate-button {
+  width: 80px;
+  height: 40px;
+  border-radius: 5px 5px 5px 5px;
+  border-left: none;
+  border: 0;
+  cursor: pointer;
+  background-color: #e6e1d9;
+  font-family: "Poiret One", cursive;
+  font-size: 20px;
+}
+
+#add-roommate-button:hover {
+  transition: 0.5s;
+  background-color: #ccc6be;
+}
+
+.add-roommate-button {
+  margin: 0 auto;
+  text-align: center;
+}
+.duration-select select {
+  padding: 12px;
+  width: 170px;
+  border: none;
+  outline: none;
+}
+@media only screen and (max-width: 1000px) {
+  .add-roommate-content{
+    width:600px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .add-roommate-content{
+    width:450px;
+  }
+}
+@media only screen and (max-width: 280px) {
+
+  .duration-select select{
+    width:50px;
+    height:auto;
+    padding:2px;
+  }
+
+  .add-roommate-content{
+    width:250px;
+  }
+}
